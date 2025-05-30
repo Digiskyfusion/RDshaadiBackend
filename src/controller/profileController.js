@@ -10,6 +10,7 @@ const createProfile = async (req, res) => {
     // Step 1: Check if profile already exists for this user
     const existingProfile = await profileModel.findOne({ userId });
 
+
     if (existingProfile) {
       return res.status(400).json({
         message: "User has already submitted profile.",
@@ -22,7 +23,7 @@ const createProfile = async (req, res) => {
       userId,
       ...profileData, // Spread all other fields from profileData
     });
-
+console.log("hello", newProfile);
     res.status(201).json({
       message: "Profile created successfully!",
       data: newProfile,

@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-// const User = require("./user"); // Make sure path is correct
+const User = require("./user"); // Make sure path is correct
 const profileSchema = new mongoose.Schema(
   {
     userId: {
