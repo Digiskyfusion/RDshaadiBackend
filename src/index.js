@@ -30,7 +30,7 @@ const io = socketIo(server, {
 });
 
 app.use(cors({
-    origin: ['http://localhost:5173', 'https://shaadi-ruby.vercel.app','https://www.shaadisanskar.com'], // Add allowed origins
+    origin: ['http://localhost:5173',,'https://chibharahouse.com'], // Add allowed origins
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }));

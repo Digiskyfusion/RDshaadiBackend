@@ -26,10 +26,10 @@ const userSchema = new mongoose.Schema({
     type: Date,
     default: null, // add this line
   },
-   credits: {
-  type: Number,
-  default: 0,
-},
+//    credits: {
+//   type: Number,
+//   default: 0,
+// },
 // deleteEmailOTP: { type: String },
 // deletePhoneOTP: { type: String },
 // isDeleteEmailOTPVerified: { type: Boolean, default: false },
