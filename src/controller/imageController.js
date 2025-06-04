@@ -48,6 +48,25 @@ const getImages = async (req, res) => {
   }
 };
 
+
+const getImageById = async (req, res) => {
+   try {
+    const { userId } = req.params;
+
+    const imageEntry = await Image.findOne({ userId });
+
+    if (!imageEntry) {
+      return res.status(404).json({ error: "No images found for this user" });
+    }
+
+    res.status(200).json(imageEntry);
+  } catch (err) {
+    console.error("Error fetching images:", err);
+    res.status(500).json({ error: "Server error" });
+  }
+};
+
+
 // UPDATE: Update image array by ID
 const updateImages = async (req, res) => {
   try {
@@ -91,4 +110,5 @@ module.exports = {
   getImages,
   updateImages,
   deleteImages,
+  getImageById
 };
